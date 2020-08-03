@@ -1,6 +1,7 @@
 var express = require('express');
 const app = express();
-var auth = express.basicAuth('amazon', 'candidate');
+var basicAuth = require('basic-auth-connect');
+var auth = basicAuth('amazon', 'candidate');
 
 app.set("view engine", "ejs");
 
